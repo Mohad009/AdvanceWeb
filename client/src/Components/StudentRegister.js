@@ -21,6 +21,7 @@ const addStudent=()=>{
     })
         .then((res)=>{
             setresponseMsg(res.data);
+    
     })
 
     .catch((e)=>{

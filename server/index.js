@@ -43,6 +43,19 @@ app.get("/getStudent/:id",async(req,res)=>{
     }
 })
 
+//delete a document
+app.get("/delete/:id",async(req,res)=>{
+    const id=req.params.id
+    await StudentModel.findOneAndDelete({_id:id})
+    const count=await StudentModel.countDocuments({})
+    const msg="Item Deleted"
+    res.send({count,msg})
+
+})
+
+
+//update student
+// app.get("updateStudent/:id",)
 app.listen(port,()=>{
     console.log("Server is running on port 3001")
 })
