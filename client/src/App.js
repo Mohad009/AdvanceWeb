@@ -5,6 +5,7 @@ import Home from './Components/Home.js';
 import ShowStudents from './Components/ShowStudents.js'
 import GetStudentbyId from './Components/GetStudentbyId.js';
 import ManageStudents from './Components/ManageStudent.js';
+import UpdateStudent from './Components/UpdateStudent.js';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/show' element={<ShowStudents/>}/>
         <Route path='/showbyid' element={<GetStudentbyId/>}/>
         <Route path='/manage' element={<ManageStudents/>}/>
+        <Route path='/update/:sid' element={<UpdateStudent/>}/>
       </Routes>
 
     </div>

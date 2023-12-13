@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import Axios from 'axios'
+import {Link} from 'react-router-dom'
 
 
 function ManageStudents() {
@@ -46,10 +47,9 @@ const deleteStudent=async(id)=>{
                                     <td>{s.email}</td>
                                     <td>{s.dept}</td>
                                     <td><button type='button' className='btn btn-success' onClick={()=>deleteStudent(s._id)}>Delete</button></td>
+                                    <Link to={`/update/${s._id}`}>
                                     <td><button type='button' className='btn btn-success'>Update</button></td>
-                                
-                                
-                                
+                                    </Link>
                              </tr>
                                 )
                                 }
