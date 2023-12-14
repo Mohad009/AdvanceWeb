@@ -25,7 +25,7 @@ function App() {
         <Route path='/show' element={<ShowStudents/>}/>
         <Route path='/showbyid' element={<GetStudentbyId/>}/>
         <Route path='/manage' element={<ManageStudents/>}/>
-        <Route path='/update/:sid' element={<UpdateStudent/>}/>
+        <Route path='/update' element={<UpdateStudent/>}/>
       </Routes>
 
     </div>

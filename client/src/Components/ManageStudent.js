@@ -47,9 +47,11 @@ const deleteStudent=async(id)=>{
                                     <td>{s.email}</td>
                                     <td>{s.dept}</td>
                                     <td><button type='button' className='btn btn-success' onClick={()=>deleteStudent(s._id)}>Delete</button></td>
-                                    <Link to={`/update/${s._id}`}>
-                                    <td><button type='button' className='btn btn-success'>Update</button></td>
-                                    </Link>
+                                    
+                                    <td><Link to={'/update'} state={{students:s}}>
+                                        <button type='button' className='btn btn-success'>Update</button></Link>
+                                        </td>
+                                    
                              </tr>
                                 )
                                 }

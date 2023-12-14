@@ -55,7 +55,27 @@ app.get("/delete/:id",async(req,res)=>{
 
 
 //update student
-// app.get("updateStudent/:id",)
+app.put("/updateStudent/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+        const studentUpdate = await StudentModel.findOne({_id: id });
+       
+        studentUpdate.studId = String(req.body.studId);
+        studentUpdate.studName = String(req.body.studName);
+        studentUpdate.email = String(req.body.email);
+        studentUpdate.password = String(req.body.password);
+        studentUpdate.dept = String(req.body.dept);
+        await studentUpdate.save();
+        res.send({ msg: "Document Updated successfully" })
+    }
+    catch (err) { 
+        res.send({ error: "Failed to update student" });
+    }
+});
+
+
+
+
 app.listen(port,()=>{
     console.log("Server is running on port 3001")
 })
