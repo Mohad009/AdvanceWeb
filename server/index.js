@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import StudentModel from "./Models/Student.js"
-const port=3001
+const port=3002
 const app=express()
 app.use(express.json())
 app.use(cors())
