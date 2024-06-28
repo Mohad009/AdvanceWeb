@@ -1,0 +1,30 @@
+.style-table {
+	margin: auto;
+	width: 600px;
+	border-collapse: collapse;
+	border: 1px solid #454444; /*for older IE*/
+	border-style: hidden;
+    margin-bottom: 3px;
+	border: 1px solid black;
+}
+
+
+.style-thead{
+	padding: 8px;
+	background-color: #fde9d9;
+	font-size: large;
+}
+
+
+.style-row{
+	padding: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #30302f #ccc;
+    text-align: left;
+	margin-bottom: 5px;
+	height:40px;
+}
+
+
+tr:hover {background-color: rgb(190, 171, 164);}
